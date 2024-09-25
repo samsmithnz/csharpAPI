@@ -16,10 +16,10 @@ namespace csharpAPI.Controllers
             _publicHolidayService = publicHolidayService;
         }
 
-        [HttpGet("{country}")]
-        public ActionResult<IEnumerable<PublicHoliday>> GetPublicHolidays(string country)
+        [HttpGet("{country}/{year}")]
+        public ActionResult<IEnumerable<PublicHoliday>> GetPublicHolidays(string country, int year)
         {
-            var publicHolidays = _publicHolidayService.GetPublicHolidays(country);
+            var publicHolidays = _publicHolidayService.GetPublicHolidays(country, year);
             if (publicHolidays == null)
             {
                 return NotFound();
