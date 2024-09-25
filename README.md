@@ -2,7 +2,7 @@
 
 ## Overview
 
-This repository contains a .NET C# WebAPI that provides public holiday information for a given country. The WebAPI accepts a country as input and returns a list of public holidays for that country.
+This repository contains a .NET C# WebAPI that provides public holiday information for a given country. The WebAPI accepts a country and year as input and returns a list of public holidays for that country and year.
 
 ## How to Use
 
@@ -23,23 +23,23 @@ This repository contains a .NET C# WebAPI that provides public holiday informati
 
 5. Use a tool like Postman or cURL to make a GET request to the following endpoint:
    ```
-   GET /api/publicholidays/{country}
+   GET /api/publicholidays/{country}/{year}
    ```
 
-   Replace `{country}` with the name of the country you want to get public holidays for.
+   Replace `{country}` with the name of the country and `{year}` with the year you want to get public holidays for.
 
 ## Example
 
-To get public holidays for the United States, make a GET request to:
+To get public holidays for the United States in 2023, make a GET request to:
 ```
-GET /api/publicholidays/UnitedStates
+GET /api/publicholidays/UnitedStates/2023
 ```
 
-The response will be a JSON array containing the public holidays for the specified country.
+The response will be a JSON array containing the public holidays for the specified country and year.
 
 ## Dependencies
 
-- .NET Core 3.1 or later
+- .NET 8 or later
 - Visual Studio 2019 or later
 
 ## License
